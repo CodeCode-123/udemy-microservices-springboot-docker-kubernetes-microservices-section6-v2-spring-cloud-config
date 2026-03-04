@@ -4,9 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c2bdc336-0a50-42f5-94f7-57af826c0af9" name="Changes" comment="Modified application.yaml in Cloud Config Server to search/load config .yaml files from a local file system. Modified the datasource URLs with AUTO_SERVER=TRUE to allow multiple app connections to the same database">
+    <list default="true" id="c2bdc336-0a50-42f5-94f7-57af826c0af9" name="Changes" comment="Modified application.yaml in Cloud Config Server to search/load config .yaml files from a GitHub repository with an encrypted email address, and decrypted by the server with an encryption key.">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configserver/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/configserver/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/src/main/java/com/easybytes/accounts/dto/AccountsContactInfoDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/java/com/easybytes/accounts/dto/AccountsContactInfoDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cards/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cards/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cards/src/main/java/com/eazybytes/cards/dto/CardsContactInfoDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/cards/src/main/java/com/eazybytes/cards/dto/CardsContactInfoDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cards/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/cards/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configserver/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/configserver/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loans/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/loans/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loans/src/main/java/com/eazybytes/loans/dto/LoansContactInfoDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/loans/src/main/java/com/eazybytes/loans/dto/LoansContactInfoDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loans/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/loans/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loans/target/classes/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/loans/target/classes/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loans/target/classes/com/eazybytes/loans/dto/LoansContactInfoDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/loans/target/classes/com/eazybytes/loans/dto/LoansContactInfoDto.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,9 +92,9 @@
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "Spring Boot.AccountsApplication.executor": "Debug",
-    "Spring Boot.CardsApplication.executor": "Run",
+    "Spring Boot.CardsApplication.executor": "Debug",
     "Spring Boot.ConfigserverApplication.executor": "Debug",
-    "Spring Boot.LoansApplication.executor": "Run",
+    "Spring Boot.LoansApplication.executor": "Debug",
     "git-widget-placeholder": "Rebasing main",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Users/ada1/Desktop/GetHireTechnologies_CognizeTech/ExtraCourses/UdemyMicroservicesSpringBootDockerKubernetes/microservice/section6/v2-spring-cloud-config/configserver/src/main/resources/config",
@@ -98,7 +110,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.AccountsApplication">
+  <component name="RunManager" selected="Spring Boot.LoansApplication">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="v2-spring-cloud-config" />
       <method v="2">
@@ -204,10 +216,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.LoansApplication" />
+        <item itemvalue="Spring Boot.CardsApplication" />
         <item itemvalue="Spring Boot.AccountsApplication" />
         <item itemvalue="Spring Boot.ConfigserverApplication" />
-        <item itemvalue="Spring Boot.CardsApplication" />
-        <item itemvalue="Spring Boot.LoansApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -258,14 +270,23 @@
       <option name="project" value="LOCAL" />
       <updated>1772658048896</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Modified application.yaml in Cloud Config Server to search/load config .yaml files from a GitHub repository with an encrypted email address, and decrypted by the server with an encryption key.">
+      <option name="closed" value="true" />
+      <created>1772662705737</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1772662705737</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added a Spring Cloud Config Server to centralize configurations of microservices" />
     <MESSAGE value="Modified pom.xml, application.yaml of accounts, loans, and cards to establish a link connection between the configserver and microservices. Allow the Spring Cloud Config Server and Microservice clients to run together on different ports. Deleted unnecessary application_prod.yaml and application_qa.yaml as they were moved to the Spring Cloud Config Server." />
     <MESSAGE value="Modified application.yaml in Cloud Config Server to search/load config .yaml files from a local file system. Modified the datasource URLs with AUTO_SERVER=TRUE to allow multiple app connections to the same database" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modified application.yaml in Cloud Config Server to search/load config .yaml files from a local file system. Modified the datasource URLs with AUTO_SERVER=TRUE to allow multiple app connections to the same database" />
+    <MESSAGE value="Modified application.yaml in Cloud Config Server to search/load config .yaml files from a GitHub repository with an encrypted email address, and decrypted by the server with an encryption key." />
+    <option name="LAST_COMMIT_MESSAGE" value="Modified application.yaml in Cloud Config Server to search/load config .yaml files from a GitHub repository with an encrypted email address, and decrypted by the server with an encryption key." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
