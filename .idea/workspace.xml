@@ -4,33 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c2bdc336-0a50-42f5-94f7-57af826c0af9" name="Changes" comment="Added a Spring Cloud Config Server to centralize configurations of microservices">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="c2bdc336-0a50-42f5-94f7-57af826c0af9" name="Changes" comment="Modified pom.xml, application.yaml of accounts, loans, and cards to establish a link connection between the configserver and microservices. Allow the Spring Cloud Config Server and Microservice clients to run together on different ports. Deleted unnecessary application_prod.yaml and application_qa.yaml as they were moved to the Spring Cloud Config Server.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/data/testdb.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/data/testdb.mv.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/src/main/java/com/easybytes/accounts/controller/AccountsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/java/com/easybytes/accounts/controller/AccountsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/src/main/java/com/easybytes/accounts/service/IAccountsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/java/com/easybytes/accounts/service/IAccountsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/src/main/java/com/easybytes/accounts/service/impl/AccountsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/java/com/easybytes/accounts/service/impl/AccountsServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/accounts/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/src/main/resources/application_prod.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/src/main/resources/application_qa.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cards/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cards/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cards/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/cards/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cards/src/main/resources/application_prod.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cards/src/main/resources/application_qa.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/configserver/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/configserver/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loans/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/loans/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loans/src/main/java/com/eazybytes/loans/controller/LoansController.java" beforeDir="false" afterPath="$PROJECT_DIR$/loans/src/main/java/com/eazybytes/loans/controller/LoansController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configserver/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/configserver/src/main/resources/application.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/loans/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/loans/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loans/src/main/resources/application_prod.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/loans/src/main/resources/application_qa.yaml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/loans/target/classes/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/loans/target/classes/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loans/target/classes/application_prod.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/loans/target/classes/application_qa.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/loans/target/classes/com/eazybytes/loans/controller/LoansController.class" beforeDir="false" afterPath="$PROJECT_DIR$/loans/target/classes/com/eazybytes/loans/controller/LoansController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loans/target/classes/com/eazybytes/loans/service/impl/LoansServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/loans/target/classes/com/eazybytes/loans/service/impl/LoansServiceImpl.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,13 +26,6 @@
         <option value="Interface" />
         <option value="Class" />
       </list>
-    </option>
-  </component>
-  <component name="Git.Pull.Settings">
-    <option name="OPTIONS">
-      <set>
-        <option value="REBASE" />
-      </set>
     </option>
   </component>
   <component name="Git.Settings">
@@ -90,6 +63,9 @@
       </MavenGeneralSettings>
     </option>
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 5
@@ -106,10 +82,10 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "Spring Boot.AccountsApplication.executor": "Debug",
-    "Spring Boot.CardsApplication.executor": "Debug",
+    "Spring Boot.AccountsApplication.executor": "Run",
+    "Spring Boot.CardsApplication.executor": "Run",
     "Spring Boot.ConfigserverApplication.executor": "Debug",
-    "Spring Boot.LoansApplication.executor": "Debug",
+    "Spring Boot.LoansApplication.executor": "Run",
     "git-widget-placeholder": "Rebasing main",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Users/ada1/Desktop/GetHireTechnologies_CognizeTech/ExtraCourses/UdemyMicroservicesSpringBootDockerKubernetes/microservice/section6/v2-spring-cloud-config/configserver/src/main/resources/config",
@@ -125,22 +101,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.LoansApplication">
-    <configuration name="AccountsApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="accounts" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.easybytes.accounts.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.easybytes.accounts" />
-      <option name="MAIN_CLASS_NAME" value="com.easybytes.accounts.AccountsApplicationTests" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Spring Boot.CardsApplication">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="v2-spring-cloud-config" />
       <method v="2">
@@ -193,6 +154,7 @@
     <configuration name="CardsApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UnknownPolicyInFreeMode" />
       <module name="cards" />
+      <option name="PROGRAM_PARAMETERS" value="--spring.profiles.active=qa" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.eazybytes.cards.CardsApplication" />
       <extension name="coverage">
         <pattern>
@@ -221,6 +183,7 @@
     <configuration name="LoansApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UnknownPolicyInFreeMode" />
       <module name="loans (1)" />
+      <option name="PROGRAM_PARAMETERS" value="--spring.profiles.active=qa" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.eazybytes.loans.LoansApplication" />
       <extension name="coverage">
         <pattern>
@@ -247,11 +210,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.LoansApplication" />
         <item itemvalue="Spring Boot.CardsApplication" />
+        <item itemvalue="Spring Boot.LoansApplication" />
         <item itemvalue="Spring Boot.AccountsApplication" />
         <item itemvalue="Spring Boot.ConfigserverApplication" />
-        <item itemvalue="JUnit.AccountsApplicationTests" />
       </list>
     </recent_temporary>
   </component>
@@ -286,12 +248,21 @@
       <option name="project" value="LOCAL" />
       <updated>1772603877103</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Modified pom.xml, application.yaml of accounts, loans, and cards to establish a link connection between the configserver and microservices. Allow the Spring Cloud Config Server and Microservice clients to run together on different ports. Deleted unnecessary application_prod.yaml and application_qa.yaml as they were moved to the Spring Cloud Config Server.">
+      <option name="closed" value="true" />
+      <created>1772649371333</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1772649371334</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added a Spring Cloud Config Server to centralize configurations of microservices" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added a Spring Cloud Config Server to centralize configurations of microservices" />
+    <MESSAGE value="Modified pom.xml, application.yaml of accounts, loans, and cards to establish a link connection between the configserver and microservices. Allow the Spring Cloud Config Server and Microservice clients to run together on different ports. Deleted unnecessary application_prod.yaml and application_qa.yaml as they were moved to the Spring Cloud Config Server." />
+    <option name="LAST_COMMIT_MESSAGE" value="Modified pom.xml, application.yaml of accounts, loans, and cards to establish a link connection between the configserver and microservices. Allow the Spring Cloud Config Server and Microservice clients to run together on different ports. Deleted unnecessary application_prod.yaml and application_qa.yaml as they were moved to the Spring Cloud Config Server." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
