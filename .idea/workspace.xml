@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c2bdc336-0a50-42f5-94f7-57af826c0af9" name="Changes" comment="Modified pom.xml, application.yaml of accounts, loans, and cards to establish a link connection between the configserver and microservices. Allow the Spring Cloud Config Server and Microservice clients to run together on different ports. Deleted unnecessary application_prod.yaml and application_qa.yaml as they were moved to the Spring Cloud Config Server.">
+    <list default="true" id="c2bdc336-0a50-42f5-94f7-57af826c0af9" name="Changes" comment="Modified application.yaml in Cloud Config Server to search/load config .yaml files from a local file system. Modified the datasource URLs with AUTO_SERVER=TRUE to allow multiple app connections to the same database">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cards/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/cards/src/main/resources/application.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/configserver/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/configserver/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loans/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/loans/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loans/target/classes/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/loans/target/classes/application.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,11 +74,12 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "JUnit.AccountsApplicationTests.executor": "Debug",
+    "JUnit.ConfigserverApplicationTests.executor": "Debug",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "Spring Boot.AccountsApplication.executor": "Run",
+    "Spring Boot.AccountsApplication.executor": "Debug",
     "Spring Boot.CardsApplication.executor": "Run",
     "Spring Boot.ConfigserverApplication.executor": "Debug",
     "Spring Boot.LoansApplication.executor": "Run",
@@ -101,7 +98,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.CardsApplication">
+  <component name="RunManager" selected="Spring Boot.AccountsApplication">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="v2-spring-cloud-config" />
       <method v="2">
@@ -139,7 +136,6 @@
     <configuration name="AccountsApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UnknownPolicyInFreeMode" />
       <module name="accounts" />
-      <option name="PROGRAM_PARAMETERS" value="--spring.profiles.active=qa" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.easybytes.accounts.AccountsApplication" />
       <extension name="coverage">
         <pattern>
@@ -154,7 +150,6 @@
     <configuration name="CardsApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UnknownPolicyInFreeMode" />
       <module name="cards" />
-      <option name="PROGRAM_PARAMETERS" value="--spring.profiles.active=qa" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.eazybytes.cards.CardsApplication" />
       <extension name="coverage">
         <pattern>
@@ -183,7 +178,6 @@
     <configuration name="LoansApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UnknownPolicyInFreeMode" />
       <module name="loans (1)" />
-      <option name="PROGRAM_PARAMETERS" value="--spring.profiles.active=qa" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.eazybytes.loans.LoansApplication" />
       <extension name="coverage">
         <pattern>
@@ -210,10 +204,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.CardsApplication" />
-        <item itemvalue="Spring Boot.LoansApplication" />
         <item itemvalue="Spring Boot.AccountsApplication" />
         <item itemvalue="Spring Boot.ConfigserverApplication" />
+        <item itemvalue="Spring Boot.CardsApplication" />
+        <item itemvalue="Spring Boot.LoansApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -256,13 +250,22 @@
       <option name="project" value="LOCAL" />
       <updated>1772649371334</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Modified application.yaml in Cloud Config Server to search/load config .yaml files from a local file system. Modified the datasource URLs with AUTO_SERVER=TRUE to allow multiple app connections to the same database">
+      <option name="closed" value="true" />
+      <created>1772658048896</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1772658048896</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added a Spring Cloud Config Server to centralize configurations of microservices" />
     <MESSAGE value="Modified pom.xml, application.yaml of accounts, loans, and cards to establish a link connection between the configserver and microservices. Allow the Spring Cloud Config Server and Microservice clients to run together on different ports. Deleted unnecessary application_prod.yaml and application_qa.yaml as they were moved to the Spring Cloud Config Server." />
-    <option name="LAST_COMMIT_MESSAGE" value="Modified pom.xml, application.yaml of accounts, loans, and cards to establish a link connection between the configserver and microservices. Allow the Spring Cloud Config Server and Microservice clients to run together on different ports. Deleted unnecessary application_prod.yaml and application_qa.yaml as they were moved to the Spring Cloud Config Server." />
+    <MESSAGE value="Modified application.yaml in Cloud Config Server to search/load config .yaml files from a local file system. Modified the datasource URLs with AUTO_SERVER=TRUE to allow multiple app connections to the same database" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modified application.yaml in Cloud Config Server to search/load config .yaml files from a local file system. Modified the datasource URLs with AUTO_SERVER=TRUE to allow multiple app connections to the same database" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
