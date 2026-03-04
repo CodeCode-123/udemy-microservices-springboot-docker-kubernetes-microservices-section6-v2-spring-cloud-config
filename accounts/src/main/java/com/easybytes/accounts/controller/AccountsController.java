@@ -5,6 +5,7 @@ import com.easybytes.accounts.dto.AccountsContactInfoDto;
 import com.easybytes.accounts.dto.CustomerDto;
 import com.easybytes.accounts.dto.ErrorResponseDto;
 import com.easybytes.accounts.dto.ResponseDto;
+import com.easybytes.accounts.service.IAccountsService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
@@ -21,7 +22,6 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
-import com.easybytes.accounts.service.IAccountsService;
 
 @Tag(
         name = "CRUD REST APIs for Accounts in EazyBank",
@@ -32,17 +32,13 @@ import com.easybytes.accounts.service.IAccountsService;
 @Validated
 public class AccountsController {
     private final IAccountsService iAccountsService;
-
     public AccountsController(IAccountsService iAccountsService) {
         this.iAccountsService = iAccountsService;
     }
-
     @Value("${build.version}")
     private String buildVersion;
-
     @Autowired
     private Environment environment;
-
     @Autowired
     private AccountsContactInfoDto accountsContactInfoDto;
 
@@ -66,7 +62,7 @@ public class AccountsController {
     )
     @PostMapping("/create")
     public ResponseEntity<ResponseDto> createAccount(@Valid @RequestBody CustomerDto customerDto) {
-        iAccountsService.createAccount(customerDto);
+
         return ResponseEntity
                 .status(HttpStatus.CREATED)
                 .body(new ResponseDto(AccountsConstants.STATUS_201, AccountsConstants.MESSAGE_201));
