@@ -4,21 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c2bdc336-0a50-42f5-94f7-57af826c0af9" name="Changes" comment="Modified application.yaml in Cloud Config Server to search/load config .yaml files from a GitHub repository with an encrypted email address, and decrypted by the server with an encryption key.">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+    <list default="true" id="c2bdc336-0a50-42f5-94f7-57af826c0af9" name="Changes" comment="Modified pom.xml to add Spring Cloud Bus dependencies, modified DTO for runtime update using getter and setter, installed RabbitMQ locally, modified application.yaml to configure RabbitMQ">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/src/main/java/com/easybytes/accounts/dto/AccountsContactInfoDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/java/com/easybytes/accounts/dto/AccountsContactInfoDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cards/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cards/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cards/src/main/java/com/eazybytes/cards/dto/CardsContactInfoDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/cards/src/main/java/com/eazybytes/cards/dto/CardsContactInfoDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cards/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/cards/src/main/resources/application.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/configserver/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/configserver/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loans/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/loans/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loans/src/main/java/com/eazybytes/loans/dto/LoansContactInfoDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/loans/src/main/java/com/eazybytes/loans/dto/LoansContactInfoDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loans/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/loans/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loans/target/classes/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/loans/target/classes/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loans/target/classes/com/eazybytes/loans/dto/LoansContactInfoDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/loans/target/classes/com/eazybytes/loans/dto/LoansContactInfoDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configserver/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/configserver/src/main/resources/application.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -278,7 +267,15 @@
       <option name="project" value="LOCAL" />
       <updated>1772662705737</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Modified pom.xml to add Spring Cloud Bus dependencies, modified DTO for runtime update using getter and setter, installed RabbitMQ locally, modified application.yaml to configure RabbitMQ">
+      <option name="closed" value="true" />
+      <created>1772668167943</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1772668167943</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -286,7 +283,8 @@
     <MESSAGE value="Modified pom.xml, application.yaml of accounts, loans, and cards to establish a link connection between the configserver and microservices. Allow the Spring Cloud Config Server and Microservice clients to run together on different ports. Deleted unnecessary application_prod.yaml and application_qa.yaml as they were moved to the Spring Cloud Config Server." />
     <MESSAGE value="Modified application.yaml in Cloud Config Server to search/load config .yaml files from a local file system. Modified the datasource URLs with AUTO_SERVER=TRUE to allow multiple app connections to the same database" />
     <MESSAGE value="Modified application.yaml in Cloud Config Server to search/load config .yaml files from a GitHub repository with an encrypted email address, and decrypted by the server with an encryption key." />
-    <option name="LAST_COMMIT_MESSAGE" value="Modified application.yaml in Cloud Config Server to search/load config .yaml files from a GitHub repository with an encrypted email address, and decrypted by the server with an encryption key." />
+    <MESSAGE value="Modified pom.xml to add Spring Cloud Bus dependencies, modified DTO for runtime update using getter and setter, installed RabbitMQ locally, modified application.yaml to configure RabbitMQ" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modified pom.xml to add Spring Cloud Bus dependencies, modified DTO for runtime update using getter and setter, installed RabbitMQ locally, modified application.yaml to configure RabbitMQ" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
