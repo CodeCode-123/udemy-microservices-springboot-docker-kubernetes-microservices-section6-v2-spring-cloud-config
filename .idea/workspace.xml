@@ -4,23 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c2bdc336-0a50-42f5-94f7-57af826c0af9" name="Changes" comment="Modified pom.xml to add Spring Cloud Config Monitor, modified application.yaml to allow the use of RabbitMQ and actuator endpoints for Spring Cloud Bus. Created a WebHook in GitHub yamls repo to monitor and update automatically when there is a push">
-      <change afterPath="$PROJECT_DIR$/docker-compose/default/common-config.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="c2bdc336-0a50-42f5-94f7-57af826c0af9" name="Changes" comment="Modified pom.xml and yaml files to create Docker images and run Docker containers by using a Docker compose yaml file. Try health check without using &quot;curl&quot; but using &quot;wget --no-verbose --tries=1 --spider&quot;">
+      <change afterPath="$PROJECT_DIR$/docker-compose/prod/common-config.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose/prod/docker-compose.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose/qa/common-config.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose/qa/docker-compose.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose/default/docker-compose.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cards/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cards/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configserver/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/configserver/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cards/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/cards/src/main/resources/application.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/configserver/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/configserver/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configserver/src/main/resources/config/accounts.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/configserver/src/main/resources/config/accounts.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configserver/src/main/resources/config/cards.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/configserver/src/main/resources/config/cards.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configserver/src/main/resources/config/loans-prod.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/configserver/src/main/resources/config/loans-prod.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configserver/src/main/resources/config/loans.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/configserver/src/main/resources/config/loans.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loans/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/loans/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loans/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/loans/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose/default/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose/default/docker-compose.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loans/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/loans/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loans/target/classes/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/loans/target/classes/application.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +95,7 @@
     "Spring Boot.LoansApplication.executor": "Debug",
     "git-widget-placeholder": "Rebasing main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/ada1/Desktop/GetHireTechnologies_CognizeTech/ExtraCourses/UdemyMicroservicesSpringBootDockerKubernetes/microservice/section6/v2-spring-cloud-config/configserver/src/main/resources/config",
+    "last_opened_file_path": "/Users/ada1/Desktop/GetHireTechnologies_CognizeTech/ExtraCourses/UdemyMicroservicesSpringBootDockerKubernetes/microservice/section6/v2-spring-cloud-config/docker-compose/qa",
     "project.structure.last.edited": "SDKs",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.33678162",
@@ -109,6 +104,8 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/docker-compose/qa" />
+      <recent name="$PROJECT_DIR$/docker-compose/prod" />
       <recent name="$PROJECT_DIR$/configserver/src/main/resources/config" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/docker-compose/default" />
@@ -334,7 +331,15 @@
       <option name="project" value="LOCAL" />
       <updated>1772673459846</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Modified pom.xml and yaml files to create Docker images and run Docker containers by using a Docker compose yaml file. Try health check without using &quot;curl&quot; but using &quot;wget --no-verbose --tries=1 --spider&quot;">
+      <option name="closed" value="true" />
+      <created>1772768441340</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1772768441340</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -361,7 +366,8 @@
     <MESSAGE value="Modified application.yaml in Cloud Config Server to search/load config .yaml files from a GitHub repository with an encrypted email address, and decrypted by the server with an encryption key." />
     <MESSAGE value="Modified pom.xml to add Spring Cloud Bus dependencies, modified DTO for runtime update using getter and setter, installed RabbitMQ locally, modified application.yaml to configure RabbitMQ" />
     <MESSAGE value="Modified pom.xml to add Spring Cloud Config Monitor, modified application.yaml to allow the use of RabbitMQ and actuator endpoints for Spring Cloud Bus. Created a WebHook in GitHub yamls repo to monitor and update automatically when there is a push" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modified pom.xml to add Spring Cloud Config Monitor, modified application.yaml to allow the use of RabbitMQ and actuator endpoints for Spring Cloud Bus. Created a WebHook in GitHub yamls repo to monitor and update automatically when there is a push" />
+    <MESSAGE value="Modified pom.xml and yaml files to create Docker images and run Docker containers by using a Docker compose yaml file. Try health check without using &quot;curl&quot; but using &quot;wget --no-verbose --tries=1 --spider&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modified pom.xml and yaml files to create Docker images and run Docker containers by using a Docker compose yaml file. Try health check without using &quot;curl&quot; but using &quot;wget --no-verbose --tries=1 --spider&quot;" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
