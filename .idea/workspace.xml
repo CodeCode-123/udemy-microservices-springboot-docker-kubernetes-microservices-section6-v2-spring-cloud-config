@@ -4,10 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c2bdc336-0a50-42f5-94f7-57af826c0af9" name="Changes" comment="Modified pom.xml to add Spring Cloud Bus dependencies, modified DTO for runtime update using getter and setter, installed RabbitMQ locally, modified application.yaml to configure RabbitMQ">
+    <list default="true" id="c2bdc336-0a50-42f5-94f7-57af826c0af9" name="Changes" comment="Modified pom.xml to add Spring Cloud Config Monitor, modified application.yaml to allow the use of RabbitMQ and actuator endpoints for Spring Cloud Bus. Created a WebHook in GitHub yamls repo to monitor and update automatically when there is a push">
+      <change afterPath="$PROJECT_DIR$/docker-compose/default/common-config.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose/default/docker-compose.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cards/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cards/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/configserver/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/configserver/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/configserver/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/configserver/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configserver/src/main/resources/config/accounts.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/configserver/src/main/resources/config/accounts.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configserver/src/main/resources/config/cards.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/configserver/src/main/resources/config/cards.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configserver/src/main/resources/config/loans-prod.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/configserver/src/main/resources/config/loans-prod.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configserver/src/main/resources/config/loans.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/configserver/src/main/resources/config/loans.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loans/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/loans/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loans/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/loans/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,24 +95,26 @@
     "RunOnceActivity.git.unshallow": "true",
     "Spring Boot.AccountsApplication.executor": "Debug",
     "Spring Boot.CardsApplication.executor": "Debug",
+    "Spring Boot.ConfigserverApplication (1).executor": "Debug",
     "Spring Boot.ConfigserverApplication.executor": "Debug",
     "Spring Boot.LoansApplication.executor": "Debug",
     "git-widget-placeholder": "Rebasing main",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Users/ada1/Desktop/GetHireTechnologies_CognizeTech/ExtraCourses/UdemyMicroservicesSpringBootDockerKubernetes/microservice/section6/v2-spring-cloud-config/configserver/src/main/resources/config",
-    "project.structure.last.edited": "Artifacts",
+    "project.structure.last.edited": "SDKs",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.33678162",
-    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler"
+    "settings.editor.selected.configurable": "MavenSettings"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/configserver/src/main/resources/config" />
       <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/docker-compose/default" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.LoansApplication">
+  <component name="RunManager" selected="Spring Boot.ConfigserverApplication">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="v2-spring-cloud-config" />
       <method v="2">
@@ -203,12 +218,48 @@
       <option name="RUN_TOOL" value="" />
       <method v="2" />
     </configuration>
+    <configuration default="true" type="tests" factoryName="Autodetect">
+      <module name="accounts" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="RUN_TOOL" value="" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Doctests">
+      <module name="accounts" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="RUN_TOOL" value="" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.ConfigserverApplication" />
         <item itemvalue="Spring Boot.LoansApplication" />
         <item itemvalue="Spring Boot.CardsApplication" />
         <item itemvalue="Spring Boot.AccountsApplication" />
-        <item itemvalue="Spring Boot.ConfigserverApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -275,8 +326,33 @@
       <option name="project" value="LOCAL" />
       <updated>1772668167943</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Modified pom.xml to add Spring Cloud Config Monitor, modified application.yaml to allow the use of RabbitMQ and actuator endpoints for Spring Cloud Bus. Created a WebHook in GitHub yamls repo to monitor and update automatically when there is a push">
+      <option name="closed" value="true" />
+      <created>1772673459846</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1772673459846</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="dependencySupport" implementationName="java:org.springframework:spring-core" />
+    <option featureType="dependencySupport" implementationName="java:jakarta.validation:jakarta.validation-api" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework.integration:spring-integration-core" />
+    <option featureType="dependencySupport" implementationName="java:io.projectreactor:reactor-core" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework.data:spring-data-commons" />
+    <option featureType="dependencySupport" implementationName="executable:kubectl" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework.cloud:spring-cloud-context" />
+    <option featureType="dependencySupport" implementationName="java:org.hibernate.validator:hibernate-validator" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework:spring-webmvc" />
+    <option featureType="dependencySupport" implementationName="java:org.projectlombok:lombok" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework.cloud:spring-cloud-stream" />
+    <option featureType="dependencySupport" implementationName="executable:docker" />
+    <option featureType="dependencySupport" implementationName="java:jakarta.persistence:jakarta.persistence-api" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework:spring-messaging" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework.boot:spring-boot" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added a Spring Cloud Config Server to centralize configurations of microservices" />
@@ -284,7 +360,8 @@
     <MESSAGE value="Modified application.yaml in Cloud Config Server to search/load config .yaml files from a local file system. Modified the datasource URLs with AUTO_SERVER=TRUE to allow multiple app connections to the same database" />
     <MESSAGE value="Modified application.yaml in Cloud Config Server to search/load config .yaml files from a GitHub repository with an encrypted email address, and decrypted by the server with an encryption key." />
     <MESSAGE value="Modified pom.xml to add Spring Cloud Bus dependencies, modified DTO for runtime update using getter and setter, installed RabbitMQ locally, modified application.yaml to configure RabbitMQ" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modified pom.xml to add Spring Cloud Bus dependencies, modified DTO for runtime update using getter and setter, installed RabbitMQ locally, modified application.yaml to configure RabbitMQ" />
+    <MESSAGE value="Modified pom.xml to add Spring Cloud Config Monitor, modified application.yaml to allow the use of RabbitMQ and actuator endpoints for Spring Cloud Bus. Created a WebHook in GitHub yamls repo to monitor and update automatically when there is a push" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modified pom.xml to add Spring Cloud Config Monitor, modified application.yaml to allow the use of RabbitMQ and actuator endpoints for Spring Cloud Bus. Created a WebHook in GitHub yamls repo to monitor and update automatically when there is a push" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
